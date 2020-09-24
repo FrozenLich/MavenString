@@ -100,7 +100,7 @@ public class HuluRegisTest {
 
         HuluRegistration test3 = new HuluRegistration();
         test3.setGender("Transgender");
-        assertNull(test1.getGender());
+        assertNull(test3.getGender());
 
         System.out.println("Test for gender success");
     }
