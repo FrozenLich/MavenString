@@ -16,20 +16,22 @@ public class HuluRegisTest {
         assertNull(test1.getEmail());
 
         HuluRegistration test2 = new HuluRegistration();
-        test1.setEmail(false2);
-        assertNull(test1.getEmail());
+        test2.setEmail(false2);
+        assertNull(test2.getEmail());
 
         HuluRegistration test3 = new HuluRegistration();
-        test1.setEmail(false3);
-        assertNull(test1.getEmail());
+        test3.setEmail(false3);
+        assertNull(test3.getEmail());
 
         HuluRegistration test4 = new HuluRegistration();
-        test1.setEmail(correct1);
+        test4.setEmail(correct1);
         assertEquals(correct1,test4.getEmail());
 
         HuluRegistration test5 = new HuluRegistration();
-        test1.setEmail(correct2);
-        assertEquals(correct2,test4.getEmail());
+        test5.setEmail(correct2);
+        assertEquals(correct2,test5.getEmail());
+
+        System.out.println("Test for email success");
     }
 
     @Test
@@ -45,6 +47,7 @@ public class HuluRegisTest {
         test2.setPassword(goodPW);
         assertEquals(goodPW,test2.getPassword());
 
+        System.out.println("Test for password success");
     }
 
     @Test
@@ -59,6 +62,8 @@ public class HuluRegisTest {
         HuluRegistration test2 = new HuluRegistration();
         test2.setName(goodName);
         assertEquals(goodName,test2.getName());
+
+        System.out.println("Test for name success");
     }
 
     @Test
@@ -79,6 +84,7 @@ public class HuluRegisTest {
         assertEquals(-1, test2.getBirthMonth());
         assertEquals(-1, test2.getBirthDate());
 
+        System.out.println("Test for birthday success");
     }
 
 
@@ -90,11 +96,13 @@ public class HuluRegisTest {
 
         HuluRegistration test2 = new HuluRegistration();
         test2.setGender("Prefer not to say");
-        assertEquals("Male", test2.getGender());
+        assertEquals("Prefer not to say", test2.getGender());
 
         HuluRegistration test3 = new HuluRegistration();
         test3.setGender("Transgender");
         assertNull(test1.getGender());
+
+        System.out.println("Test for gender success");
     }
 
 }
